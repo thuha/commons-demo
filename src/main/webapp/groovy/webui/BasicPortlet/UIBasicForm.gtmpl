@@ -1,0 +1,49 @@
+
+<%
+	def jsManager = _ctx.getRequestContext().getJavascriptManager();
+	
+	jsManager.loadScriptResource("imm-resources");	
+	jsManager.addJavascript("Humain.hello();");
+		
+	def requirejs = jsManager.getRequireJS();
+	
+	requirejs.require("SHARED/onload-resources","robot");	
+	//requirejs.require("PORTLET/demoJS/BasicPortlet","js");
+	requirejs.require("SHARED/jquery","gj");
+	
+	//requirejs.addScripts("gj('#Robot').click(function() {robot.Robot.goodbye(); });");	
+	jsManager.addOnResizeJavascript("robot.Robot.goodbye");
+	
+	requirejs.addScripts("gj('#Humain').click(function() {Humain.goodbye(); });");
+	requirejs.addScripts("gj('#Utils').click(function() {js.Utils.smile(); });");
+%>
+<div class="$uicomponent.id">
+    <div class="Text"><%= uicomponent.getText() %></div>
+	<input id="Utils"  type="button" value="SMILE!!!"/>
+    <input id="Robot"  type="button" value="Robot"/>
+    <input id="Humain" type="button" value="Humain"/>
+    <a href="http://google.com" onclick="<%requirejs.require('SHARED/onload-resources','js').addScripts('js.Robot.goodbye();');%>">Go to google </a>
+</div>
+
+
+<script>
+require(["SHARED/base","SHARED/jquery","PORTLET/calendar/CalendarPortlet","SHARED/csResources","SHARED/webui-ext"],
+function(base,gj,cal,cs,webuiExt) {
+	gj('a#UIPopupWindowQuick_UIPopupWindow_Close').click(function() {base.UIPopup.hide('UIQuckAddEventPopupWindow')
+	});
+
+	webui.UIPopupWindow.hide('UIQuckAddEventPopupWindow', false);
+
+	cal.UICalendarPortlet.isAllday('QuickAddEventContainer','');
+
+	gj('td#allDay').click(function() {cal.UICalendarPortlet.showHideTime(this)
+	});
+
+	webuiExt.UICombobox.init('fromTime');
+
+	webuiExt.UICombobox.init('toTime');
+
+	base.Browser.onLoad();
+
+})
+</script>

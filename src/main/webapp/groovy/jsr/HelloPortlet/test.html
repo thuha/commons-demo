@@ -1,0 +1,19 @@
+require(["SHARED/base","SHARED/jquery","PORTLET/calendar/CalendarPortlet","SHARED/csResources","SHARED/webui-ext"],
+function(base,gj,cal,cs,webuiExt) {
+	gj('a#UIPopupWindowQuick_UIPopupWindow_Close').click(function() {base.UIPopup.hide('UIQuckAddEventPopupWindow')
+	});
+
+	webui.UIPopupWindow.hide('UIQuckAddEventPopupWindow', false);
+
+	cal.UICalendarPortlet.isAllday('QuickAddEventContainer','');
+
+	gj('td#allDay').click(function() {cal.UICalendarPortlet.showHideTime(this)
+	});
+
+	webuiExt.UICombobox.init('fromTime');
+
+	webuiExt.UICombobox.init('toTime');
+
+	base.Browser.onLoad();
+
+})

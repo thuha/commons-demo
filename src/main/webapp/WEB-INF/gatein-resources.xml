@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<gatein-resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.gatein.org/xml/ns/gatein_resources_1_3 http://www.gatein.org/xml/ns/gatein_resources_1_3"
+	xmlns="http://www.gatein.org/xml/ns/gatein_resources_1_3">
+
+	<portal-skin>
+		<skin-name>Default</skin-name>
+		<skin-module>DocumentSelector</skin-module>
+		<css-path>/skin/DefaultSkin/commons/Stylesheet.css</css-path>
+		<css-priority>5</css-priority>
+	</portal-skin>
+
+	<module>
+		<name>onload-resources</name>	
+		<as>robot</as>		
+		<script>
+			<path>/javascript/eXo/test/resource1.js</path>
+		</script>						
+	</module>
+	
+	<module>
+		<name>onload2-resources</name>	
+		<as>robot</as>		
+		<script>
+			<path>/javascript/eXo/test/Utils.js</path>
+		</script>				
+		<depends>
+			<module>jquery</module>	
+			<as>jQuery</as>	
+		</depends>
+	</module>
+
+	<scripts>
+		<name>imm-resources</name>				
+		<script>
+			<path>/javascript/eXo/test/resource2.js</path>
+		</script>		
+		<depends>
+			<scripts>bootstrap</scripts>	
+		</depends>
+	</scripts>
+	
+    <module>
+    	<name>config</name>
+    	<script>
+    		<path>/javascript/eXo/test/config.js</path>
+    	</script>
+    </module>           
+        
+	<portlet>
+	    <name>BasicPortlet</name>	    
+	    <module>
+	      <script>
+    		<path>/javascript/eXo/test/Utils.js</path>
+    	      </script>
+	      <depends>
+		<module>onload-resources</module>
+		<as>robot</as>
+	      </depends>
+	    </module>   
+	</portlet>		
+		
+</gatein-resources>
+

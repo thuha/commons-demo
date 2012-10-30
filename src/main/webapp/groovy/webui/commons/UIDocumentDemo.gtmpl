@@ -1,0 +1,12 @@
+
+<div class="UIDocumentDemo">
+  <% uiform.begin() %>  
+  <% uiform.renderChild(uiform.UIDOCUMENTCOMP_ID); %>
+  <div style="clear:both;">
+  </div>
+  <div class="ClearBoth"></div>
+    <div class="UIAction">
+           
+    </div>    
+  <% uiform.end() %>
+</div>

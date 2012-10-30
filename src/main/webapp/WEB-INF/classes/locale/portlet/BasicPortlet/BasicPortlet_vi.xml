@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bundle>
+  <UIBasicPortlet></UIBasicPortlet>
+   <UIBasicConfig>
+    <label>
+      <UIBasicPortletTextStringInput>Chữ</UIBasicPortletTextStringInput>
+      <UIBasicPortletPathStringInput>Đường dẫn đến node</UIBasicPortletPathStringInput>
+      <UIBasicPortletOperatorStringInput>Phep tinh</UIBasicPortletOperatorStringInput>
+    </label>
+    <action>
+      <Save>Luu</Save>
+      <Cancel>Quay lai</Cancel>
+    </action>
+  </UIBasicConfig>
+</bundle>

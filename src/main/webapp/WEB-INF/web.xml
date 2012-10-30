@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<web-app>
+  <display-name>demoPortlet</display-name>
+  <description>This is the demo portlets, use only for training</description>
+  
+  <listener>
+    <listener-class>org.exoplatform.portal.application.PortalSessionListener</listener-class>
+  </listener>
+  
+  <filter>
+    <filter-name>ResourceRequestFilter</filter-name>
+    <filter-class>org.exoplatform.portal.application.ResourceRequestFilter</filter-class>
+  </filter>
+ 
+  <filter-mapping>
+    <filter-name>ResourceRequestFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+ 
+  <filter-mapping>
+    <filter-name>ResourceRequestFilter</filter-name>
+    <url-pattern>/css/*</url-pattern>
+  </filter-mapping>
+ 
+</web-app>
