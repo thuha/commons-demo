@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Folder canAddChild="true" canRemove="true" currentFolder=""
+	driveName="" hasChild="true" name="" nodeType="nt:unstructured" path="/"
+	title="Node {&#10; id: 00exo0jcr0root0uuid0000000000000;&#10; path: []:1;&#10; primary-type: nt:unstructured;&#10; mixin-types: [exo:owneable, exo:privilegeable];&#10; acl: OWNER: __system; *:/platform/administrators read; *:/platform/administrators add_node; *:/platform/administrators set_property; *:/platform/administrators remove; &#10; locked: false;&#10; checked-out: true &#10;}"
+	titlePath="" workspaceName="portal-system">
+	<Folders>
+		<Folder canAddChild="true" canRemove="true" currentFolder="production"
+			driveName="" hasChild="false" name="production" nodeType="nt:unstructured"
+			path="/production"
+			title="Node {&#10; id: af8c49857f00010106e5a6064f346d09;&#10; path: []:1[]production:1;&#10; primary-type: nt:unstructured;&#10; mixin-types: [];&#10; acl: OWNER: __system; *:/platform/administrators read; *:/platform/administrators add_node; *:/platform/administrators set_property; *:/platform/administrators remove; &#10; locked: false;&#10; checked-out: true &#10;}"
+			titlePath="production" workspaceName="portal-system" />
+	</Folders>
+	<Files />
+</Folder>
+
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Locals>
+	<Locations>
+		<location canAddChild="true" name="system" />
+		<location canAddChild="true" name="portal-system" />
+		<location canAddChild="true" name="portal-work" />
+	</Locations>
+</Locals>
